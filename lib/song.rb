@@ -1,13 +1,16 @@
 class Song
-  attr_accessor :name, :song, :artist
+  # Song belongs to Artist
+  attr_accessor :name, :artist
 
   def initialize(name)
     @name = name
   end
 
+  #if this song(self.artist) has an artist
+  # return artist name
   def artist_name
     if self.artist
-      self.artist.name
+      artist.name
     else
       nil
     end

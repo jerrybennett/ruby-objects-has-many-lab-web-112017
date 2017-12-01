@@ -1,13 +1,16 @@
 class Post
-  attr_accessor :name, :posts, :title, :author
+  # here Post belongs to :author
+  attr_accessor :title, :author
 
   def initialize(title)
     @title = title
   end
 
+  #checks to see if this post instance has an author,
+  # if not, returns nil
   def author_name
     if self.author
-      self.author.name
+      author.name
     else
       nil
     end
